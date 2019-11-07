@@ -1,7 +1,7 @@
 # Личный проект «Пинк» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Vladimir Votrin](https://up.htmlacademy.ru/adaptive/18/user/1242295).
-* Наставник: `Неизвестно`.
+* Наставник: `Ольга Тюлихова`.
 
 ---
 
