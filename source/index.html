@@ -12,37 +12,43 @@
       <nav class="main-nav">
         <button class="main-nav__toggle" type="button">Открыть меню</button>
         <ul class="main-nav__list site-list">
-          <li class="site-list__item">
+          <li class="site-list__item site-list__item--active" >
             <a>Главная</a>
           </li>
           <li class="site-list__item">
-            <a>Фоторграфии</a>
+            <a href="photo.html">Фотографии</a>
           </li>
           <li class="site-list__item">
-            <a>Конкурс</a>
+            <a href="form.html">Конкурс</a>
           </li>
           <li class="site-list__item">
-            <a>HTML ACADEMY</a>
+            <a href="#">HTML ACADEMY</a>
           </li>
         </ul>
       </nav>
     </header>
     <main class="page-main">
       <h1 class="visually-hidden">pink</h1>
-      <section clas="download">
+      <section class="download">
         <h2 class="visually-hidden">скачать приложение</h2>
         <p class="download__slogan">взгляните на жизнь иначе!</p>
-        <a class="download__url" href="http://localhost">скачать приложение</a>
+        <a class="download__url" href="https://play.google.com/store/apps/">скачать приложение</a>
         <div class="download__icons device">
           <ul class="device__list">
             <li class="device__item">
-              <img class="device__image device__image--iphone" src="img/iphone.jpg" alt="iphone">
+              <a href="http://itunes.com/apps/">
+                <img class="device__image device__image--iphone" src="img/iphone.jpg" alt="iphone">
+              </a>
             </li>
             <li class="device__item">
-              <img class="device__image device__image--android" src="img/android.jpg" alt="android">
+              <a href="https://play.google.com/store/apps/">
+                <img class="device__image device__image--android" src="img/android.jpg" alt="android">
+              </a>
             </li>
             <li class="device__item">
-              <img class="device__image device__image--windows" src="img/windows.jpg" alt="windows">
+              <a href="https://www.microsoft.com/store/apps/">
+                <img class="device__image device__image--windows" src="img/windows.jpg" alt="windows">
+              </a>
             </li>
           </ul>
         </div>
@@ -50,7 +56,7 @@
       </section>
       <section class="advantages">
         <p class="advantages__slogan">Устали от серости мегаполиса?</p>
-        <p class="advantages__slogan2">Нам есть, что вам предложить!</p>
+        <p class="advantages__slogan">Нам есть, что вам предложить!</p>
         <ul class="advantages__list">
           <li class="advantages__item">
             <h3 class="advantages__title">Поднимаем настроение</h3>
@@ -102,21 +108,65 @@
         <div class="prices__wrapper slider">
           <ul class="prices__list  slider__list">
             <li class="prices__item slider__item">
-              Стандарт 3,99 USD
+              <div class="prices__column-header prices__column-header--hit">
+                <p class="prices__header-name">Стандарт</p>
+                <p class="prices__header-content">3,99 USD</p>
+              </div>
+              <div class="prices__row">
+                <p class="prices__text">Розовый фильтр</p>
+                <img class="prices__apply-image prices__apply-image--yes" src="localhost/yes.jpg" alt="Включен">
+              </div>
+              <div class="prices__row">
+                <p class="prices__text">Смайлики</p>
+                <img class="prices__apply-image prices__apply-image--yes" src="localhost/yes.jpg" alt="Включен">
+              </div>
+              <div class="prices__row">
+                <p class="prices__text">Комментарии</p>
+                <img class="prices__apply-image prices__apply-image--no" src="localhost/no.jpg" alt="Не включен">
+              </div>
             </li>
             <li class="prices__item slider__item">
-              Розовый фильтр
-              <img class="prices__apply-image--yes" src="localhost/yes.jpg" alt="Включен">
+              <div class="prices__column-header prices__column-header">
+                <p class="prices__header-name">Минимальный</p>
+                <p class="prices__header-content">0,99 USD</p>
+              </div>
+              <div class="prices__row">
+                <p class="prices__text">Розовый фильтр</p>
+                <img class="prices__apply-image prices__apply-image--yes" src="localhost/yes.jpg" alt="Включен">
+              </div>
+              <div class="prices__row">
+                <p class="prices__text">Смайлики</p>
+                <img class="prices__apply-image prices__apply-image--no" src="localhost/no.jpg" alt="Не включен">
+              </div>
+              <div class="prices__row">
+                <p class="prices__text">Комментарии</p>
+                <img class="prices__apply-image prices__apply-image--no" src="localhost/no.jpg" alt="Не включен">
+              </div>
             </li>
             <li class="prices__item slider__item">
-              Смайлики
-              <img class="prices__apply-image--yes" src="localhost/yes.jpg" alt="Включен">
-            </li>
-            <li class="prices__item slider__item">
-              Комментарии
-              <img class="prices__apply-image--no" src="localhost/no.jpg" alt="Не включен">
+              <div class="prices__column-header prices__column-header">
+                <p class="prices__header-name">Полный</p>
+                <p class="prices__header-content">9,99 USD</p>
+              </div>
+              <div class="prices__row">
+                <p class="prices__text">Розовый фильтр</p>
+                <img class="prices__apply-image prices__apply-image--yes" src="localhost/yes.jpg" alt="Включен">
+              </div>
+              <div class="prices__row">
+                <p class="prices__text">Смайлики</p>
+                <img class="prices__apply-image prices__apply-image--yes" src="localhost/yes.jpg" alt="Включен">
+              </div>
+              <div class="prices__row">
+                <p class="prices__text">Комментарии</p>
+                <img class="prices__apply-image prices__apply-image--yes" src="localhost/yes.jpg" alt="Включен">
+              </div>
             </li>
           </ul>
+          <p class="prices__toggles slider__toggles">
+            <button class="slider__toggle">1</button>
+            <button class="slider__toggle">2</button>
+            <button class="slider__toggle">3</button>
+          </p>
         </div>
       </section>
       <section class="contacts">
@@ -128,26 +178,16 @@
               </p>
             </li>
             <li class="contacts__item">
-              <p class="contacts__text">
-                Звоните:<br>
-                <a class="contacts__phone" href="tel:+78125556666">
-                  <span class="contacts__phone-mobile">Тел.:</span> +7 (812) 555-66-66
-                </a>
-              </p>
+              <span class="contacts__address-title">Звоните:</span>
+              <a class="contacts__address-text" href="tel:+7#">+7 (812) 555-66-66</a>
             </li>
             <li class="contacts__item">
-              <p class="contacts__text">
-                Пишите:<br>
-                <a class="contacts__email" href="mailto:name@email.com">
-                  <span class="contacts__email-link">mailto:name@email.com</span>
-                </a>
-              </p>
+              <span class="contacts__address-title">Пишите:</span>
+              <a class="contacts__address-text" href="mail@htmlacademy.ru">name@email.com</a>
             </li>
             <li class="contacts__item">
-              <p class="contacts__text">
-                Приезжайте в гости:<br>
-                ул. Большая Конюшенная, 19/8
-              </p>
+              <span class="contacts__address-title">Приезжайте в гости:</span>
+              <span class="contacts__address-text">ул. Большая Конюшенная, 19/8</span>
             </li>
             <li>
               <h2 class="visually-hidden">Карта</h2>
@@ -158,8 +198,6 @@
           </ul>
         </div>
       </section>
-    </main>
-    <main class="page-htmlacademy">
     </main>
   </body>
 </html>
