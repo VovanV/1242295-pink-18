@@ -27,6 +27,97 @@
     </ul>
   </nav>
 </header>
+<main class="page-form">
+  <h1 class="visually-hidden">Pink form</h1>
+  <section class="page-form__header main-header">
+    <h2 class="main-header__header">Конкурс на самое безбашенное путешествие с Пинк</h2>
+    <p class="main-header__title">Поделитесь своей историей и получите шанс выиграть ценный приз - 1000 миль на вашу бонусную карту!</p>
+  </section>
+  <section class="page-form__order-form order-form">
+    <h2 class="visually-hidden">Форма заказа</h2>
+    <form class="order-form__form" action="https://echo.htmlacademy.ru" method="post">
+      <ul class="order-form__list">
+        <li class="order-form__item">
+          <label for="surname">Фамилия:</label>
+          <input class="order-form__surname" type="text" name="surname" id="surname" placeholder="Укажите фамилию*" required>
+        </li>
+        <li class="order-form__item">
+          <label for="name">Имя:</label>
+          <input class="order-form__name" type="text" name="name" id="name" placeholder="Введите ваше имя*" required>
+        </li>
+        <li class="order-form__item">
+          <label for="fathersname">Отчество:</label>
+          <input class="order-form__fathersname" type="text" name="fathersname" id="fathersname" placeholder="Ну и отчество тоже">
+        </li>
+      </ul>
+      <div class="order-form__achievements">
+        <p class="order-form__achievements-title">Ваши безбашенные достижения в путешествии</p>
+        <ul class="order-form__achievement-list">
+          <li class="order-form__achievement-item">
+            <input class="order-form__achievement-input" type="checkbox" name="shark" id="shark" checked>
+            <label for="shark">Сделал селфи с акулой</label>
+          </li>
+          <li class="order-form__achievement-item">
+            <input class="order-form__achievement-input" type="checkbox" name="sunbathe" id="sunbathe" checked>
+            <label for="sunbathe">Обгорел на пляже</label>
+          </li>
+          <li class="order-form__achievement-item">
+            <input class="order-form__achievement-input" type="checkbox" name="norris" id="norris">
+            <label for="norris">Сделал селфи с акулой</label>
+          </li>
+          <li class="order-form__achievement-item">
+            <input class="order-form__achievement-input" type="checkbox" name="souvenirs" id="souvenirs">
+            <label for="souvenirs">Накупил сувениров</label>
+          </li>
+          <li class="order-form__achievement-item">
+            <input class="order-form__achievement-input" type="checkbox" name="tower" id="tower" checked>
+            <label for="tower">Удержал башню</label>
+          </li>
+          <li class="order-form__achievement-item">
+            <input class="order-form__achievement-input" type="checkbox" name="hotel" id="hotel">
+            <label for="hotel">Разгромил отель</label>
+          </li>
+        </ul>
+      </div>
+      <div class="order-form__contacts">
+        <ul class="order-form__contacts-list">
+          <li class="order-form__contacts-item">
+            <label for="phone">Номер телефона</label>
+            <input class="order-form__contacts-phone" type="tel" name="phone" id="phone" placeholder="Номер, пожалуйста">
+          </li>
+          <li class="order-form__contacts-item">
+            <label for="email">Адрес почты</label>
+            <input class="order-form__contacts-email" type="email" name="email" id="email" placeholder="Введите почту *" required>
+          </li>
+        </ul>
+      </div>
+      <div class="order-form__traveling">
+        <ul class="order-form__traveling-list">
+          <li class="order-form__traveling-item">
+            <input class="order-form__traveling-radio" type="radio" name="application" id="ios" value="ios" checked>
+            <label for="ios">Pink для iOS</label>
+          </li>
+          <li class="order-form__traveling-item">
+            <input class="order-form__traveling-radio" type="radio" name="application" id="android" value="android">
+            <label for="android">Pink для Android</label>
+          </li>
+          <li class="order-form__traveling-item">
+            <input class="order-form__traveling-radio" type="radio" name="application" id="windows" value="windows">
+            <label for="windows">Windows Phone</label>
+          </li>
+        </ul>
+      </div>
+      <div class="order-form__emotions">
+        <label for="describe">Опишите свои эмоции</label>
+        <textarea class="order-form__emotions-describe" name="describe" id="describe" rows="6" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+      </div>
+      <div class="order-form__footer">
+        <button class="order-form__send" type="submit">Отправить форму</button>
+        <p class="order-form__required-text">* - обязательные поля</p>
+      </div>
+    </form>
+  </section>
+</main>
 <footer class="page-footer">
   <div class="page-footer__wrapper">
     <img class="page-footer__logo" src="local/footer_logo.jpg" alt="PINK">
