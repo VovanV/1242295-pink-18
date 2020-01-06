@@ -1,0 +1,52 @@
+.device-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 56px;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.device-list__item {
+  margin: 0 18px;
+}
+
+.device-list__item--iphone a {
+  color: yellow;
+  font-size: 0;
+
+  &::before {
+    content: url("../../img/logo-apple.svg");
+
+    position: relative;
+    top: 1px;
+    left: 0;
+  }
+}
+
+.device-list__item--android a {
+  color: yellow;
+  font-size: 0;
+
+  &::before {
+    content: url("../../img/logo-android.svg");
+
+    position: relative;
+    top: 4px;
+    left: -2px;
+  }
+}
+
+.device-list__item--windows a {
+  color: yellow;
+  font-size: 0;
+
+  &::before {
+    content: url("../../img/logo-microsoft.svg");
+
+    position: relative;
+    top: 5px;
+  }
+}

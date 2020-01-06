@@ -83,24 +83,27 @@
     <main class="page-main">
       <h1 class="visually-hidden">pink</h1>
       <section class="download">
-        <h2 class="visually-hidden">скачать приложение</h2>
-        <p class="download__slogan">взгляните на жизнь иначе!</p>
-        <a class="download__url" href="https://play.google.com/store/apps/">скачать приложение</a>
-        <div class="download__icons device">
-          <ul class="device__list">
-            <li class="device__item">
+        <div class="download-header">
+          <h2 class="visually-hidden">скачать приложение</h2>
+          <div class="download-header__image-mobile"></div>
+          <p class="download-header__slogan">Взгляните на жизнь иначе!</p>
+        </div>
+        <div class="download__icons">
+          <a class="device__url" href="https://play.google.com/store/apps/">скачать приложение</a>
+          <ul class="download__device device-list">
+            <li class="device-list__item device-list__item--iphone">
               <a href="http://itunes.com/apps/">
-                <img class="device__image device__image--iphone" src="img/iphone.jpg" alt="iphone">
+                iphone
               </a>
             </li>
-            <li class="device__item">
+            <li class="device-list__item device-list__item--android">
               <a href="https://play.google.com/store/apps/">
-                <img class="device__image device__image--android" src="img/android.jpg" alt="android">
+                android
               </a>
             </li>
-            <li class="device__item">
+            <li class="device-list__item device-list__item--windows">
               <a href="https://www.microsoft.com/store/apps/">
-                <img class="device__image device__image--windows" src="img/windows.jpg" alt="windows">
+                windows
               </a>
             </li>
           </ul>
@@ -108,23 +111,30 @@
         <p class="download__info">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
       </section>
       <section class="advantages">
-        <p class="advantages__slogan">Устали от серости мегаполиса?</p>
-        <p class="advantages__slogan">Нам есть, что вам предложить!</p>
-        <ul class="advantages__list">
-          <li class="advantages__item">
-            <h3 class="advantages__title">Поднимаем настроение</h3>
-            <p class="advantages__description">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
-          </li>
-          <li class="advantages__item">
-            <h3 class="advantages__title">Меняем мир вокруг</h3>
-            <p class="advantages__description">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
-          </li>
-          <li class="advantages__item">
-            <h3 class="advantages__title">Заводит новых друзей</h3>
-            <p class="advantages__description">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
-          </li>
-        </ul>
-        <img class="advantages__iphone" src="local/iphone.jpg" alt="Всем привет!">
+        <div class="advantages__header">
+          <p class="advantages__slogan">Устали от серости мегаполиса?</p>
+          <p class="advantages__slogan">Нам есть, что вам предложить!</p>
+        </div>
+        <div class="advantages__list-wrapper">
+          <ul class="advantages__list">
+            <li class="advantages__item">
+              <h3 class="advantages__title">Поднимаем настроение</h3>
+              <p class="advantages__description">Приложение позволит вам победить осеннюю хандру и депрессию буквально в
+                несколько кликов!</p>
+            </li>
+            <li class="advantages__item">
+              <h3 class="advantages__title">Меняем мир вокруг</h3>
+              <p class="advantages__description">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы
+                усилить эффект</p>
+            </li>
+            <li class="advantages__item">
+              <h3 class="advantages__title">Заводит новых друзей</h3>
+              <p class="advantages__description">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и
+                заводите новых</p>
+            </li>
+          </ul>
+          <div class="advantages__iphone"  alt="Всем привет!"/>
+        </div>
       </section>
       <section class="reviews">
         <div class="reviews__wrapper slider">
