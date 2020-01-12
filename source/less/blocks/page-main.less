@@ -1,0 +1,45 @@
+.page-main {
+  width: 320px;
+  min-height: 3103px; //временно для разметки
+  margin: auto;
+
+  background-color: rgba(154, 0, 183, 0.5);
+}
+
+.page-main--form {
+  min-height: 2404px;
+}
+
+.page-main--photo {
+  min-height: 3584px;
+}
+
+@media (min-width: @tablet-width) {
+  .page-main {
+    width: 660px;
+    min-height: 3184px;
+  }
+
+  .page-main--form {
+    min-height: 2771px;
+  }
+
+  .page-main--photo {
+    min-height: 3348px;
+  }
+}
+
+@media (min-width: @desktop-width){
+  .page-main {
+    width: 1200px;
+    min-height: 3910px;
+  }
+
+  .page-main--form {
+    min-height: 1750px;
+  }
+
+  .page-main--photo {
+    min-height: 3067px;
+  }
+}
