@@ -1,41 +1,155 @@
 .page-main {
-  min-height: 3103px; //временно для разметки
-
-  background-color: rgba(154, 0, 183, 0.5);
+  position: relative;
+  z-index: 1;
+  overflow: hidden;     //чтобы задний фон не выпадал за пределы
 }
 
-.page-main--form {
-  min-height: 2404px;
+.page-main__bg-wrapper {
+  padding-top: 29px;
+  padding-bottom: 83px;
+  margin-bottom: 45px;
+  background-color: @dark;
+  background-image: url("../../img/bg-back-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: 0 -66px;
+  background-size: cover;
+
+  @media (max-width: @tablet-width) {
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../../img/bg-back-mobile@2x.jpg");
+      background-position: 0 -69px;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 93px;
+    padding-top: 69px;
+    padding-bottom: 140px;
+    background-image: url("../../img/bg-back-tablet@1x.jpg");
+    background-position: center -111px;
+    background-size: auto;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../../img/bg-back-tablet@2x.jpg");
+      background-position: center -109px;
+      background-size: 1200px auto;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 91px;
+    padding-top: 173px;
+    padding-bottom: 101px;
+    background-image: url("../../img/bg-back-desktop@1x.jpg");
+    background-position: center 0;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../../img/bg-back-desktop@2x.jpg");
+      background-size: 2560px auto;
+      background-position: center 11px;
+    }
+  }
+
+  @media (min-width: 2560px) {
+    background-size: cover;
+  }
+
+  &--less-padding {
+    padding-bottom: 54px;
+
+    @media (min-width: @tablet-width) {
+      padding-bottom: 80px;
+    }
+
+    @media (min-width: @desktop-width) {
+      padding-bottom: 101px;
+    }
+  }
 }
 
-.page-main--photo {
-  min-height: 3584px;
+.page-header--closed-menu + .page-main .page-main__bg-wrapper {
+  padding-top: 101px;
+  background-position: 0 3px;
+
+  @media (max-width: @tablet-width) {
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-position: 0 1px;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    padding-top: 180px;
+    padding-bottom: 140px;
+    background-position: center 0;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../../img/bg-back-tablet@2x.jpg");
+      background-position: center 2px;
+      background-size: 1200px auto;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 213px;
+    padding-bottom: 101px;
+    background-position: center 40px;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../../img/bg-back-desktop@2x.jpg");
+      background-size: 2560px auto;
+      background-position: center 51px;
+    }
+  }
+
+  @media (min-width: 2560px) {
+    background-size: cover;
+  }
+
+  &--less-padding {
+    padding-bottom: 54px;
+
+    @media (min-width: @tablet-width) {
+      padding-bottom: 80px;
+    }
+
+    @media (min-width: @desktop-width) {
+      padding-bottom: 101px;
+    }
+  }
 }
 
-@media (min-width: @tablet-width) {
-  .page-main {
-    min-height: 3184px;
+.page-main__inner {
+  .mobile-wrapper();
+
+  @media (min-width: @tablet-width) {
+    .tablet-wrapper();
   }
 
-  .page-main--form {
-    min-height: 2771px;
-  }
-
-  .page-main--photo {
-    min-height: 3348px;
+  @media (min-width: @desktop-width) {
+    .desktop-wrapper();
   }
 }
 
-@media (min-width: @desktop-width){
-  .page-main {
-    min-height: 3910px;
+.page-main__title {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 29px;
+  color: #ffffff;
+  text-align: center;
+
+  @media (min-width: @tablet-width) {
+    font-size: 50px;
+    line-height: 60px;
   }
 
-  .page-main--form {
-    min-height: 1750px;
+  @media (min-width: @desktop-width) {
+    padding: 0 142px;
   }
+}
 
-  .page-main--photo {
-    min-height: 3067px;
+.page-main__title--wider {
+  @media (min-width: @desktop-width) {
+    padding: 0 80px;
   }
 }

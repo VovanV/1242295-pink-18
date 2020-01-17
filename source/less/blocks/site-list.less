@@ -1,60 +1,84 @@
 .site-list {
   margin: 0;
   padding: 0;
-
   list-style: none;
+  text-align: center;
 
   @media (min-width: @desktop-width) {
     display: flex;
-    justify-content: space-between;
-    width: 622px;
-    margin-top: 23px;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    margin-top: 12px;
   }
 }
 
 .site-list__item {
-  display: block;
-  height: 64px;
-  padding-top: 15px;
-
-  text-align: center;
-
-  background-color: @dark;
-  border-bottom: 1px solid @very-dark;
-  border-top: 1px solid @light-dark;
-  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  padding: 15px 10px;
+  border-top: 1px solid #485461;
+  border-bottom: 1px solid #000000;
 
   @media (min-width: @desktop-width) {
-    background-color: transparent;
+    margin-left: 80px;
+    padding: 0;
     border: none;
   }
-}
 
-.site-list__item a {
-  font-family: OpenSans-Bold, Arial, sans-serif;
-  font-size: 18px;
-  line-height: 32px;
-  color: @white;
-  text-decoration: none;
-  text-transform: uppercase;
-
-  @media (min-width: @desktop-width) {
-    font-family: OpenSans, Arial, sans-serif;
-    text-transform: none;
+  &:first-child {
+    margin: 0;
   }
 }
 
-.site-list__item--current a {
+.site-list__link {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  max-width: 280px;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 32px;
+  color: #ffffff;
+  text-transform: uppercase;
+  background-color: @dark;
+  word-break: break-word;
+
+  @media (min-width: @tablet-width) {
+    max-width: 600px;
+  }
+
   @media (min-width: @desktop-width) {
-    display: inline-block;
-    height: 30px;
-    padding-bottom: 6px;
-    border-bottom: 2px solid @white;
-    &:hover {
-      color: @white;
+    font-weight: normal;
+    text-transform: inherit;
+    background-color: transparent;
+  }
+}
+
+.site-list__link[href] {
+  &:hover,
+  &:focus {
+    color: @lipstick;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+
+    @media (min-width: @desktop-width) {
+      color: rgba(255, 255, 255, 0.3);
     }
-    &:active {
-      color: @white;
+  }
+}
+
+.site-list__link:not([href]) {
+  &::before {
+    @media (min-width: @desktop-width) {
+      position: absolute;
+      content: "";
+      bottom: -6px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: #ffffff;
     }
   }
 }

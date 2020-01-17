@@ -1,29 +1,8 @@
 .main-nav {
-  position: relative;
-  z-index: 1;
-  min-height: 252px;
-  padding: 0;
-
-  //background-color: rgba(52, 183, 186, 0.5) ;
+  max-width: 100%;
 
   @media (min-width: @desktop-width) {
-    display: block;
-
-    flex-basis: 630px;
-    flex-grow: 0;
-    margin-right: 121px;
-    min-height: 110px;
+    width: 630px;
+    margin: 0;
   }
-}
-
-.main-nav--closed {
-  display: none;
-
-  @media (min-width: @desktop-width){
-    display: block;
-  }
-}
-
-.main-nav--nojs {
-  display: block;
 }
