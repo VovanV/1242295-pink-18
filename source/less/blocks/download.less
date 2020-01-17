@@ -1,231 +1,250 @@
 .download {
-  position: relative;
-  top: -71px;
-
-  margin-bottom: -71px;
-  padding: 0;
-
-  text-align: center;
-
-  background-color: @very-dark;
-  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 41px;
+  background-color: @dark;
+  overflow: hidden;
 
   @media (min-width: @tablet-width) {
-    top: -112px;
-    margin-bottom: -112px;
-  }
-
-  @media (min-width: @desktop-width) {
-    top: -110px;
-    margin-bottom: -110px;
-  }
-}
-
-.download-header__slogan {
-  display: block;
-  min-height: 467px;
-  padding-top: 93px;
-  padding-left: 40px;
-  padding-right: 40px;
-  margin: 0;
-
-  font-family: "OpenSans-Light";
-  font-size: 24px;
-  line-height: 29px;
-  color: #ffffff;
-  font-weight: 300;
-
-  background-image: url("../../img/bg-back-mobile@1x.jpg");
-  background-repeat: no-repeat;
-  background-position: bottom;
-  background-size: cover;
-  background-color: @very-dark;
-  box-sizing: border-box;
-
-  @media (min-resolution: @retina-dppx) {
-    background-image: url("../../img/bg-back-mobile@2x.jpg");
-  }
-
-  @media (min-width: @tablet-width) {
-    min-height: 730px;
-    padding-top: 203px;
-    padding-left: 76px;
-    padding-right: 398px;
-
-    font-size: 40px;
-    line-height: 48px;
-
+    margin-bottom: 50px;
     background-image: url("../../img/bg-back-tablet@1x.jpg");
-    background-position: top;
+    background-repeat: no-repeat;
+    background-position: center -110px;
+    background-size: 1200px auto;
 
-    @media (min-resolution: @retina-dppx) {
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
       background-image: url("../../img/bg-back-tablet@2x.jpg");
     }
   }
 
   @media (min-width: @desktop-width) {
-    min-height: 853px;
-    padding-top: 219px;
-    padding-left: 162px;
-    padding-right: 800px;
-
-    font-size: 48px;
-    line-height: 60px;
-    letter-spacing: 0.02em;
-
+    margin-bottom: 66px;
+    padding-top: 110px;
     background-image: url("../../img/bg-back-desktop@1x.jpg");
+    background-position: center 0;
+    background-size: 2560px auto;
 
-    @media (min-resolution: @retina-dppx) {
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
       background-image: url("../../img/bg-back-desktop@2x.jpg");
+      background-position: center 11px;
     }
   }
-
 }
 
-.download-header {
-  position: relative;
-  min-height: 396px;
-
-  @media (min-width: @desktop-width) {
-    min-height: 852px;
-  }
-}
-
-.download-header__image-mobile {
-  position: absolute;
-  bottom: 0;
-
-  width: 258px;
-  height: 286px;
-
-  background-image: url("../../img/iphone-hand-mobile@1x.png");
+.download__bg-container {
+  background-color: @dark;
+  background-image: url("../../img/bg-back-mobile@1x.jpg");
+  background-position: center -66px;
   background-repeat: no-repeat;
   background-size: cover;
 
-  @media (min-resolution: @retina-dppx) {
-    background-image: url("../../img/iphone-hand-mobile@2x.png");
-  }
-
-  @media (min-width: @tablet-width) {
-    bottom: 0;
-    right: 20px;
-
-    width: 660px;
-    height: 545px;
-
-    background-image: url("../../img/iphone-hand-tablet@1x.png");
-
-    @media (min-resolution: @retina-dppx) {
-      background-image: url("../../img/iphone-hand-tablet@2x.png");
+  @media (max-width: @tablet-width) {
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../../img/bg-back-mobile@2x.jpg");
+      background-position: center -69px;
     }
   }
 
-  @media (min-width: @desktop-width) {
-    bottom: 0;
-    right: 4px;
+  @media (min-width: @tablet-width) {
+    background: none;
+  }
+}
 
+.download__wrapper {
+  .mobile-wrapper();
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 23px;
+  padding-bottom: 285px;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: flex-start;
+    width: 620px;
+    margin: 0 auto;
+    padding: 0 20px;
+    padding-top: 92px;
+    background: transparent;
+  }
+
+  @media (min-width: @desktop-width) {
+    .desktop-wrapper();
+    padding-top: 108px;
+  }
+}
+
+.page-header--closed-menu + .page-main .download__wrapper {
+  padding-top: 26px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 93px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 108px;
+  }
+}
+
+.download__title {
+  z-index: 2;
+  max-width: 300px;
+  margin: 0;
+  margin-bottom: 31px;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 28px;
+  color: #ffffff;
+  text-align: center;
+  box-sizing: border-box;
+  word-break: break-word;
+
+  @media (min-width: @tablet-width) {
+    align-self: flex-start;
+    max-width: 300px;
+    margin-right: 320px;
+    padding: 0 27px;
+    font-size: 40px;
+    line-height: 48px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-right: 640px;
+    margin-bottom: 52px;
+    padding: 0;
+    font-size: 50px;
+    line-height: 60px;
+  }
+}
+
+.download__photo-example {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  @media (min-width: @tablet-width) {
+    bottom: -350px;
+    left: -20px;
+    z-index: 1;
+    width: 700px;
+    max-width: none;
+    height: 545px;
+  }
+
+  @media (min-width: @desktop-width) {
+    bottom: -404px;
+    left: 27px;
     width: 1050px;
     height: 645px;
-
-    background-image: url("../../img/iphone-hand-desktop@1x.png");
-
-    @media (min-resolution: @retina-dppx){
-      background-image: url("../../img/iphone-hand-desktop@2x.png");
-    }
   }
 }
 
-.download__icons {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  min-height: 271px;
-  margin: 0;
+.download__bg-wrapper {
+  padding-top: 27px;
+  background: #1d2631;
 
   @media (min-width: @tablet-width) {
-    position: absolute;
-    top: 378px;
-    left: 20px;
-
+    z-index: 2;
     display: flex;
-    flex-direction: column;
     justify-content: flex-start;
-    width: 300px;
-    min-height: 245px;
-    margin: 0;
-  }
-
-  @media (min-width: @desktop-width){
-    position: absolute;
-    top: 450px;
-    left: 130px;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 300px;
-    min-height: 281px;
-    margin: 0;
-  }
-}
-
-.device__url {
-  display: block;
-  width: 281px;
-  height: 55px;
-  margin: 28px auto;
-  padding-top: 14px;
-
-  font-family: "OpenSans-Bold", "Arial", "sans-serif";
-  font-size: 18px;
-  color: #ffffff;
-  line-height: 18px;
-  text-align: center;
-  text-decoration: none;
-
-  background-color: @very-dark;
-  border: 3px solid #ffffff;
-  border-radius: 26px;
-  box-sizing: border-box;
-
-  &:hover {
-    color: @lipstick;
-    background-color: @white;
-  }
-  &:active {
-    color: @lipstick-transparent30;
-    background-color: @white;
-  }
-
-  @media (min-width: @tablet-width) {
-    width: 300px;
-    margin: 0;
-
-    background-color: transparent;
+    width: 620px;
+    margin: 0 auto;
+    padding: 0 20px;
+    background: transparent;
   }
 
   @media (min-width: @desktop-width) {
-    font-size: 20px;
-    line-height: 20px;
-    letter-spacing: 0.03em;
+    .desktop-wrapper();
   }
 }
 
-.download__info {
-  display: block;
-  margin-bottom: 30px;
-  padding: 0 20px;
-
-  font-family: "OpenSans-Light", "Arial", "sans-serif";
-  font-size: 14px;
-  line-height: 24px;
-  color: #ffffff;
-  text-align: center;
+.download__inner {
+  .mobile-wrapper();
+  flex-direction: column;
+  align-items: center;
 
   @media (min-width: @tablet-width) {
+    width: 300px;
+    margin: 0;
     padding: 0;
-    margin-top: 32px;
-    margin-bottom: 0;
+    background: transparent;
+  }
+}
+
+.download__button {
+  margin-bottom: 32px;
+  word-break: break-word;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 43px;
+    padding: 15px 45px 17px;
+    background: transparent;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 66px;
+    padding: 13px 28px 15px;
+    font-size: 21px;
+    line-height: 21px;
+  }
+}
+
+.download__list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 205px;
+  margin: 0;
+  margin-bottom: 21px;
+  padding: 0;
+  list-style: none;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 40px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 58px;
+  }
+}
+
+.download__item {
+  &:nth-child(1) {
+    width: 47px;
+    height: 56px;
+  }
+
+  &:nth-child(2) {
+    width: 43px;
+    height: 47px;
+    margin-top: 7px;
+  }
+
+  &:nth-child(3) {
+    width: 44px;
+    height: 41px;
+    margin-top: 11px;
+  }
+}
+
+.download__available-os {
+  max-width: 280px;
+  margin: 0;
+  margin-bottom: 31px;
+  font-weight: 300;
+  color: #ffffff;
+  text-align: center;
+  background: #1d2631;
+  word-break: break-word;
+
+  @media (min-width: @tablet-width) {
+    max-width: 300px;
+    margin-bottom: 108px;
     font-size: 18px;
+    background: transparent;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 122px;
   }
 }

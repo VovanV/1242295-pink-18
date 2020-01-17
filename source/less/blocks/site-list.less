@@ -38,14 +38,6 @@
   text-decoration: none;
   text-transform: uppercase;
 
-  &:hover {
-    color: @lipstick;
-  }
-
-  &:active {
-    color: rgba(255, 255, 255, 0.3);
-  }
-
   @media (min-width: @desktop-width) {
     font-family: OpenSans, Arial, sans-serif;
     text-transform: none;
@@ -53,16 +45,16 @@
 }
 
 .site-list__item--current a {
-  display: inline-block;
-  height: 30px;
-  padding-bottom: 6px;
-
-  border-bottom: 2px solid @white;
-
-  &:hover {
-    color: @white;
-  }
-  &:active {
-    color: @white;
+  @media (min-width: @desktop-width) {
+    display: inline-block;
+    height: 30px;
+    padding-bottom: 6px;
+    border-bottom: 2px solid @white;
+    &:hover {
+      color: @white;
+    }
+    &:active {
+      color: @white;
+    }
   }
 }

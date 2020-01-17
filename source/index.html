@@ -79,31 +79,41 @@
     <main class="page-main">
       <h1 class="visually-hidden">pink</h1>
       <section class="download">
-        <div class="download-header">
-          <h2 class="visually-hidden">скачать приложение</h2>
-          <div class="download-header__image-mobile"></div>
-          <p class="download-header__slogan">Взгляните на жизнь иначе!</p>
+        <div class="download__bg-container">
+          <div class="download__wrapper">
+            <h2 class="download__title">Взгляните на жизнь иначе!</h2>
+            <picture>
+              <source type="image/webp" media="(min-width: 960px)" srcset="img/webp/iphone-hand-desktop@1x.webp, img/webp/iphone-hand-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 660px)" srcset="img/webp/iphone-hand-tablet@1x.webp, img/webp/iphone-hand-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/webp/iphone-hand-mobile@1x.webp, img/webp/iphone-hand-mobile@2x.webp 2x">
+              <source media="(min-width: 960px)" srcset="img/iphone-hand-desktop@1x.png, img/iphone-hand-desktop@2x.png 2x">
+              <source media="(min-width: 660px)" srcset="img/iphone-hand-tablet@1x.png, img/iphone-hand-tablet@2x.png 2x">
+              <img class="download__photo-example" src="img/iphone-hand-mobile@1x.png" srcset="img/iphone-hand-mobile@2x.png 2x" width="258" height="286" alt="Пример фотографии, обработанной в приложении Pink на телефоне">
+            </picture>
+          </div>
         </div>
-        <div class="download__icons">
-          <a class="device__url" href="https://play.google.com/store/apps/">скачать приложение</a>
-          <ul class="download__device device-list">
-            <li class="device-list__item device-list__item--iphone">
-              <a href="http://itunes.com/apps/">
-                iphone
-              </a>
-            </li>
-            <li class="device-list__item device-list__item--android">
-              <a href="https://play.google.com/store/apps/">
-                android
-              </a>
-            </li>
-            <li class="device-list__item device-list__item--windows">
-              <a href="https://www.microsoft.com/store/apps/">
-                windows
-              </a>
-            </li>
-          </ul>
-          <p class="download__info">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
+        <div class="download__bg-wrapper">
+          <div class="download__inner">
+            <a class="download__button oval-button" href="https://www.apple.com/ru/itunes/">Скачать приложение</a>
+            <ul class="download__list">
+              <li class="download__item">
+                <a class="download__link" href="https://www.apple.com/ru/itunes/">
+                  <img class="download__os-logo download__os-logo--ios" src="img/logo-apple.svg" width="47" height="56" alt="Логотип Apple">
+                </a>
+              </li>
+              <li class="download__item">
+                <a class="download__link" href="https://play.google.com/store/apps">
+                  <img class="download__os-logo download__os-logo--android" src="img/logo-android.svg" width="43" height="47" alt="Логотип Android">
+                </a>
+              </li>
+              <li class="download__item">
+                <a class="download__link" href="https://www.microsoft.com/ru-ru/store/apps/windows-phone?rtc=1">
+                  <img class="download__os-logo download__os-logo--windows" src="img/logo-microsoft.svg" width="44" height="41" alt="Логотип Windows">
+                </a>
+              </li>
+            </ul>
+            <p class="download__available-os">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
+          </div>
         </div>
       </section>
       <section class="advantages">
