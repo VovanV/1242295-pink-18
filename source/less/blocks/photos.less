@@ -1,0 +1,350 @@
+.photos {
+  margin-bottom: 24px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 45px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 4px;
+  }
+}
+
+.photos__text-wrapper {
+  .mobile-wrapper();
+  margin-bottom: 48px;
+
+  @media (min-width: @tablet-width) {
+    .tablet-wrapper();
+    margin-bottom: 75px;
+  }
+
+  @media (min-width: @desktop-width) {
+    .desktop-wrapper();
+    margin-bottom: 89px;
+  }
+}
+
+.photos__discription {
+  margin: 0;
+  padding: 0 15px;
+  line-height: 30px;
+  text-align: center;
+  word-break: break-word;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 25px;
+    font-size: 18px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 150px;
+  }
+}
+
+.photos__list {
+  .mobile-wrapper();
+  position: relative;
+  flex-wrap: wrap;
+  list-style: none;
+
+  @media (min-width: @tablet-width) {
+    .tablet-wrapper();
+  }
+
+  @media (min-width: @desktop-width) {
+    .desktop-wrapper();
+  }
+}
+
+.photos__item {
+  display: flex;
+  margin-bottom: 20px;
+
+  @media (min-width: @tablet-width) {
+    width: 300px;
+    margin-right: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 54px;
+  }
+
+  &--panorama {
+    @media (min-width: @tablet-width) {
+      width: 100%;
+      margin-bottom: 55px;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin-bottom: 50px;
+    }
+  }
+
+  &:nth-child(2n + 1) {
+    @media (min-width: @tablet-width) {
+      margin-right: 0;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin-right: 20px;
+    }
+  }
+
+  &:nth-child(3n + 1) {
+    @media (min-width: @desktop-width) {
+      margin-right: 0;
+    }
+  }
+}
+
+.photos__item--panorama .photos__user-post {
+  @media (min-width: @tablet-width) {
+    flex-wrap: wrap;
+    flex-direction: row;
+    max-width: 620px;
+    min-height: auto;
+    padding-bottom: 19px;
+  }
+
+  @media (min-width: @tablet-width) {
+    max-width: 940px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 23px;
+  }
+}
+
+.photos__user-post {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 280px;       //EI11
+  margin: 0;
+  padding-bottom: 19px;
+  background: @gray;
+
+  @media (min-width: @tablet-width) {
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: flex-start;
+    max-width: 300px;
+    min-height: 455px;
+    padding-bottom: 24px;
+    box-sizing: border-box;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-height: 555px;
+  }
+}
+
+.photos__link {
+  width: 280px;
+  height: 180px;
+  margin-bottom: 18px;
+
+  @media (min-width: @tablet-width) {
+    width: 300px;
+    height: 300px;
+    margin-bottom: 24px;
+    margin-right: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    height: 400px;
+    margin-bottom: 25px;
+  }
+}
+
+.photos__link--panorama {
+  position: relative;
+  left: 50%;
+  width: 320px;
+  height: 137px;
+  margin-left: -160px;
+  font: inherit;
+
+  @media (min-width: @tablet-width) {
+    width: 700px;
+    height: 509px;
+    margin-left: -350px;
+    margin-right: 160px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1200px;
+    height: 506px;
+    margin-left: -600px;
+    margin-right: 300px;
+  }
+}
+
+.photos__link--panorama::before {
+  position: absolute;
+  content: "Панорама дня";
+  top: 0;
+  right: 20px;
+  padding: 6px 20px;
+  font-size: 13px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: -0.7px;
+  color: #ffffff;
+  background: #d22856;
+
+  @media (min-width: @tablet-width) {
+    top: 57px;
+    right: 40px;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 54px;
+    right: 131px;
+  }
+}
+
+.photos__link img {
+  width: 100%;
+}
+
+.photos__user-data {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 17px;
+
+  @media (min-width: @tablet-width) {
+    max-width: 260px;
+    margin-left: 27px;
+    padding: 0;
+  }
+}
+
+.photos__item--panorama .photos__user-data {
+  @media (min-width: @tablet-width) {
+    max-width: 400px;
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: 700px;
+  }
+}
+
+.photos__user-name {
+  margin-right: 4px;
+  font-weight: bold;
+  font-style: normal;
+  word-break: break-word;
+}
+
+.photos__time {
+  margin-top: 1px;
+  font-size: 12px;
+  font-weight: 300;
+  text-transform: uppercase;
+  word-break: break-word;
+
+  @media (min-width: @desktop-width) {
+    margin-top: 0;
+  }
+}
+
+.photos__item--panorama .photos__time {
+  @media (min-width: @tablet-width) {
+    order: 1;
+  }
+}
+
+.photos__comment {
+  width: 100%;
+  padding: 0 17px;
+  margin: 0;
+  margin-bottom: 10px;
+  word-break: break-word;
+
+  @media (min-width: @tablet-width) {
+    flex-grow: 1;
+    max-width: 300px;
+    margin-bottom: 0;
+    padding: 0 27px;
+    box-sizing: border-box;
+  }
+}
+
+.photos__item--panorama .photos__comment {
+  @media (min-width: @tablet-width) {
+    max-width: none;
+    order: 3;
+    margin-bottom: 0;
+    padding: 0 27px;
+  }
+}
+
+.photos__like {
+  position: relative;
+  max-width: 250px;
+  margin-left: 17px;
+  margin-right: auto;
+  padding: 0;
+  padding-left: 32px;
+  font: inherit;
+  font-size: 12px;
+  color: #d22856;
+  text-transform: uppercase;
+  background: none;
+  border: none;
+  cursor: pointer;
+  word-wrap: break-word;
+
+  @media (min-width: @tablet-width) {
+    max-width: 260px;
+    margin: 0 27px;
+    padding-left: 0;
+    padding-right: 24px;
+    text-align: left;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 6px;
+    left: 0;
+    width: 14px;
+    height: 14px;
+    background-image: url("../../img/icon-heart.svg");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+
+    @media (min-width: @tablet-width) {
+      top: 7px;
+      left: auto;
+      right: 4px;
+    }
+  }
+}
+
+.photos__item--panorama .photos__like {
+  @media (min-width: @tablet-width) {
+    order: 2;
+    max-width: 165px;
+    margin-top: 0;
+    margin-left: auto;
+    margin-right: 27px;
+    padding-right: 32px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-right: 35px;
+  }
+
+  &::before {
+    @media (min-width: @tablet-width) {
+      right: 1px;
+    }
+
+    @media (min-width: @desktop-width) {
+      right: 4px;
+      top: 4px;
+    }
+  }
+}
