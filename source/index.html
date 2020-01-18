@@ -188,67 +188,74 @@
         </div>
       </section>
       <section class="prices">
-        <div class="prices__wrapper slider">
-          <ul class="prices__list  slider__list">
-            <li class="prices__item slider__item">
-              <div class="prices__column-header prices__column-header--hit">
-                <p class="prices__header-name">Стандарт</p>
-                <p class="prices__header-content">3,99 USD</p>
-              </div>
-              <div class="prices__row">
-                <p class="prices__text">Розовый фильтр</p>
-                <img class="prices__apply-image prices__apply-image--yes" src="localhost/yes.jpg" alt="Включен">
-              </div>
-              <div class="prices__row">
-                <p class="prices__text">Смайлики</p>
-                <img class="prices__apply-image prices__apply-image--yes" src="localhost/yes.jpg" alt="Включен">
-              </div>
-              <div class="prices__row">
-                <p class="prices__text">Комментарии</p>
-                <img class="prices__apply-image prices__apply-image--no" src="localhost/no.jpg" alt="Не включен">
-              </div>
-            </li>
-            <li class="prices__item slider__item">
-              <div class="prices__column-header prices__column-header">
-                <p class="prices__header-name">Минимальный</p>
-                <p class="prices__header-content">0,99 USD</p>
-              </div>
-              <div class="prices__row">
-                <p class="prices__text">Розовый фильтр</p>
-                <img class="prices__apply-image prices__apply-image--yes" src="localhost/yes.jpg" alt="Включен">
-              </div>
-              <div class="prices__row">
-                <p class="prices__text">Смайлики</p>
-                <img class="prices__apply-image prices__apply-image--no" src="localhost/no.jpg" alt="Не включен">
-              </div>
-              <div class="prices__row">
-                <p class="prices__text">Комментарии</p>
-                <img class="prices__apply-image prices__apply-image--no" src="localhost/no.jpg" alt="Не включен">
-              </div>
-            </li>
-            <li class="prices__item slider__item">
-              <div class="prices__column-header prices__column-header">
-                <p class="prices__header-name">Полный</p>
-                <p class="prices__header-content">9,99 USD</p>
-              </div>
-              <div class="prices__row">
-                <p class="prices__text">Розовый фильтр</p>
-                <img class="prices__apply-image prices__apply-image--yes" src="localhost/yes.jpg" alt="Включен">
-              </div>
-              <div class="prices__row">
-                <p class="prices__text">Смайлики</p>
-                <img class="prices__apply-image prices__apply-image--yes" src="localhost/yes.jpg" alt="Включен">
-              </div>
-              <div class="prices__row">
-                <p class="prices__text">Комментарии</p>
-                <img class="prices__apply-image prices__apply-image--yes" src="localhost/yes.jpg" alt="Включен">
-              </div>
-            </li>
-          </ul>
-          <p class="prices__toggles slider__toggles">
-            <button class="slider__toggle">1</button>
-            <button class="slider__toggle">2</button>
-            <button class="slider__toggle">3</button>
+        <h2 class="prices__title visually-hidden">Цены на пакеты</h2>
+        <div class="prices__wrapper">
+          <table class="prices__table">
+            <tr class="prices__packets">
+              <td></td>
+              <td>
+                <b>База</b>
+                1,99 USD
+              </td>
+              <td class="prices__packet-name prices__packet-name--hit">
+                <b>Стандарт</b>
+                3,99 USD
+              </td>
+              <td>
+                <b>Анлим</b>
+                9,99 USD
+              </td>
+            </tr>
+            <tr>
+              <td>Розовый фильтр</td>
+              <td class="prices__yes">
+                <span class="prices__feature">Розовый фильтр</span>
+                <span class="visually-hidden">Да</span>
+              </td>
+              <td class="prices__yes">
+                <span class="prices__feature">Розовый фильтр</span>
+                <span class="visually-hidden">Да</span>
+              </td>
+              <td class="prices__yes">
+                <span class="prices__feature">Розовый фильтр</span>
+                <span class="visually-hidden">Да</span>
+              </td>
+            </tr>
+            <tr>
+              <td>Смайлики</td>
+              <td class="prices__no">
+                <span class="prices__feature">Смайлики</span>
+                <span class="visually-hidden">Нет</span>
+              </td>
+              <td class="prices__yes">
+                <span class="prices__feature">Смайлики</span>
+                <span class="visually-hidden">Да</span>
+              </td>
+              <td class="prices__yes">
+                <span class="prices__feature">Смайлики</span>
+                <span class="visually-hidden">Да</span>
+              </td>
+            </tr>
+            <tr>
+              <td>Комментарии</td>
+              <td class="prices__no">
+                <span class="prices__feature">Комментарии</span>
+                <span class="visually-hidden">Нет</span>
+              </td>
+              <td class="prices__no">
+                <span class="prices__feature">Комментарии</span>
+                <span class="visually-hidden">Нет</span>
+              </td>
+              <td class="prices__yes">
+                <span class="prices__feature">Комментарии</span>
+                <span class="visually-hidden">Да</span>
+              </td>
+            </tr>
+          </table>
+          <p class="prices__toggles toggles">
+            <button class="toggles__toggle" type="button"><span class="visually-hidden">1</span></button>
+            <button class="toggles__toggle toggles__toggle--active" type="button"><span class="visually-hidden">2</span></button>
+            <button class="toggles__toggle toggles__toggle--last" type="button"><span class="visually-hidden">3</span></button>
           </p>
         </div>
       </section>
