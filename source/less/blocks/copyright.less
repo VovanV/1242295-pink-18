@@ -1,0 +1,43 @@
+.copyright {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 128px;
+  min-height: 34px;
+}
+
+.copyright__text {
+  align-self: flex-start;
+  margin-top: 6px;
+
+  font-family: "OpenSans", "Arial", "sans-serif";
+  font-size: 14px;
+  line-height: 18px;
+  color: @dark;
+
+  @media (min-width: @desktop-width){
+    font-size: 18px;
+  }
+}
+
+.copyright__logo {
+  path {
+    fill: @lipstick;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 13px;
+  }
+}
+
+.copyright__link {
+  color: @lipstick;
+
+  &:hover {
+    color: @dark;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
