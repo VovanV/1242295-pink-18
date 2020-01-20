@@ -1,0 +1,456 @@
+.app {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @desktop-width) {
+    .desktop-wrapper();
+    margin: 0 auto;
+    margin-bottom: 96px;
+  }
+}
+
+.app__text {
+  width: 280px;
+  margin: 0 auto;
+  margin-bottom: 41px;
+  line-height: 30px;
+  text-align: center;
+  word-break: break-word;
+
+  @media (min-width: @tablet-width) {
+    width: 100%;
+    max-width: 620px;
+    margin-bottom: 69px;
+    font-size: 18px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 65px;
+  }
+}
+
+.app__bg-wrapper {
+  padding-top: 20px;
+  background-color: @gray;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 57px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 19px;
+  }
+}
+
+.app__form {
+  .mobile-wrapper();
+  flex-direction: column;
+  margin-bottom: 28px;
+
+  @media (min-width: @tablet-width) {
+    .tablet-wrapper();
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 13px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 800px;
+    margin: 0 80px;
+    padding: 0;
+  }
+}
+
+.app__left-column {
+  width: 280px;
+  height: 374px;
+  margin-bottom: 40px;
+
+  @media (min-width: @tablet-width) {
+    width: 300px;
+    height: 400px;
+  }
+}
+
+.app__right-column {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    padding-left: 27px;
+    padding-right: 13px;
+    padding-top: 9px;
+    box-sizing: border-box;
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 410px;
+    padding: 0;
+  }
+}
+
+.app__image {
+  width: 100%;
+  height: auto;
+}
+
+.app__control-panel {
+  position: relative;
+  display: flex;
+  margin-left: 15px;
+  margin-right: 25px;
+  margin-bottom: 37px;
+  padding-bottom: 66px;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding-bottom: 68px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 410px;
+    padding-bottom: 130px;
+    box-sizing: border-box;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    left: -20px;
+    bottom: 0;
+    width: 320px;
+    height: 1px;
+    background: #dddfe0;
+
+    @media (min-width: @tablet-width) {
+      display: none;
+    }
+  }
+}
+
+.app__control {
+  @media (min-width: @tablet-width) {
+    position: relative;
+    display: flex;
+    margin-bottom: 25px;
+    padding-bottom: 24px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 15px;
+    padding-bottom: 13px;
+  }
+
+  &::after {
+    @media (min-width: @tablet-width) {
+      position: absolute;
+      content: "";
+      left: 0;
+      bottom: 0;
+      width: 275px;
+      height: 1px;
+      background: #dddfe0;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 410px;
+    }
+  }
+}
+
+.app__fill {
+  @media (min-width: @tablet-width) {
+    padding-bottom: 24px;
+    margin-bottom: 23px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 18px;
+    padding-bottom: 15px;
+  }
+}
+
+.app__contrast {
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
+    padding-bottom: 25px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 20px;
+  }
+}
+
+.app__control-button {
+  flex-shrink: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.app__control-image {
+  width: 100%;
+  height: auto;
+}
+
+.app__control-button .app__control-image {
+  fill: rgba(40, 54, 69, 0.3);
+
+  // @media (min-width: @tablet-width) {
+  //   fill: #d22856;
+  // }
+}
+
+.app__control-button--active .app__control-image {
+  fill: #d22856;
+}
+
+.app__control-button:hover .app__control-image,
+.app__control-button:focus .app__control-image {
+  fill: rgba(40, 54, 69, 0.5);
+}
+
+.app__control-button:active .app__control-image {
+  fill: @lipstick;
+}
+
+.app__control-button--cut {
+  width: 46px;
+  height: 52px;
+  margin-left: 20px;
+  margin-right: 33px;
+
+  @media (min-width: @tablet-width) {
+    width: 23px;
+    height: 22px;
+    margin-left: 0;
+    margin-right: 28px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 44px;
+    height: 44px;
+    margin-right: 45px;
+  }
+}
+
+.app__control-button--fill {
+  width: 48px;
+  height: 43px;
+  margin-top: 3px;
+  margin-right: 40px;
+
+  @media (min-width: @tablet-width) {
+    width: 24px;
+    height: 22px;
+    margin-right: 26px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 48px;
+    height: 43px;
+    margin-right: 41px;
+    margin-top: 0;
+  }
+}
+
+.app__control-button--contrast {
+  width: 32px;
+  height: 32px;
+  margin-top: 8px;
+
+  @media (min-width: @tablet-width) {
+    width: 16px;
+    height: 16px;
+    margin-left: 6px;
+    margin-right: 28px;
+    margin-top: 2px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 32px;
+    height: 32px;
+    margin-left: 4px;
+    margin-right: 53px;
+    margin-top: 0;
+  }
+}
+
+.app__slide {
+  display: none;
+  position: absolute;
+  bottom: 26px;
+  width: 100%;
+  padding: 0;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+
+  @media (min-width: @tablet-width) {
+    position: static;
+    display: block;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-right: 30px;
+  }
+
+  &::-webkit-slider-thumb {
+    appearance: none;
+    border: 2px solid #d22856;
+    width: 14px;
+    height: 14px;
+    margin-top: -6px;
+    background: #ffffff;
+    border-radius: 50%;
+  }
+
+  &:active::-webkit-slider-thumb {
+    background: #d22856;
+  }
+
+  &::-moz-range-thumb {
+    border: 2px solid #d22856;
+    width: 14px;
+    height: 14px;
+    background: #ffffff;
+    border-radius: 50%;
+    box-sizing: border-box;
+    cursor: pointer;
+  }
+
+  &:active::-moz-range-thumb {
+    background: #d22856;
+  }
+
+  &::-ms-thumb {
+    border: 2px solid #d22856;
+    width: 14px;
+    height: 14px;
+    margin-top: -1px;
+    box-sizing: border-box;
+    background: #ffffff;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  &:active::-ms-thumb {
+    background: #d22856;
+  }
+
+  &::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 2px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    cursor: pointer;
+    background: @dark;
+  }
+
+  &::-moz-range-track {
+    width: 100%;
+    height: 2px;
+    cursor: pointer;
+    background: @dark;
+  }
+
+  &::-ms-track {
+    width: 100%;
+    height: 2px;
+    cursor: pointer;
+    background: transparent;
+    border-color: transparent;
+    border-width: 7px 0;
+    color: transparent;
+  }
+
+  &::-ms-fill-lower {
+    background: @dark;
+  }
+
+  &::-ms-fill-upper {
+    background: @dark;
+  }
+}
+
+.app__slide--active {
+  display: block;
+}
+
+.app__button {
+  width: 100%;
+  margin-bottom: 12px;
+  padding: 15px 35px 17px;
+  color: #d22856;
+  background: transparent;
+  border-color: #d22856;
+  cursor: pointer;
+  word-break: break-word;
+
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 23px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: auto;
+    padding-left: 42px;
+    padding-right: 42px;
+    padding-bottom: 16px;
+  }
+
+  &:hover,
+  &:focus {
+    color: #ffffff;
+    background-color: #d22856;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+    background-color: #d22856;
+  }
+}
+
+.app__button--gray {
+  color: rgba(40, 54, 69, 0.1);
+  border-color: rgba(40, 54, 69, 0.1);
+
+  @media (min-width: @desktop-width) {
+    padding-left: 56px;
+    padding-right: 52px;
+  }
+
+  &:hover,
+  &:focus {
+    color: rgba(40, 54, 69, 0.3);
+    border-color: rgba(40, 54, 69, 0.3);
+    background-color: transparent;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+    background-color: rgba(40, 54, 69, 0.3);
+    border-color: #b5b9be;
+  }
+}
+
+.app__label {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  @media (min-width: @tablet-width) {
+    width: 201px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 288px;
+  }
+}
