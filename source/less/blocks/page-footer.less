@@ -1,90 +1,183 @@
 .page-footer {
-  display: flex;
+  .mobile-wrapper();
   flex-direction: column;
-  justify-content: flex-start;
   align-items: center;
-  width: 320px;
-  min-height: 286px;
-  margin: auto;
+  margin-bottom: 36px;
+  margin-top: 40px;
 
-  &--index {
-    display: none;
-
-    @media (min-width: @tablet-width) {
-      display: flex;
-    }
+  @media (min-width: @tablet-width) {
+    .tablet-wrapper();
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 35px;
   }
 
   @media (min-width: @desktop-width) {
-    width: 1200px;
-    min-height: 200px;
+    .desktop-wrapper();
+    margin-bottom: 75px;
+    margin-top: 0;
+  }
+}
+
+.page-footer--visibility {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+  }
+}
+
+.page-footer--margin-top {
+  @media (min-width: @desktop-width) {
+    margin-top: 69px;
+  }
+}
+
+.page-footer__logo {
+  width: 147px;
+  height: 40px;
+  margin-bottom: 37px;
+}
+
+.page-footer__logo-image {
+  width: 100%;
+  height: auto;
+  fill: #283645;
+  pointer-events: none;     //для EI11 состояния active у ссылки
+}
+
+.page-footer__logo:hover .page-footer__logo-image,
+.page-footer__logo:focus .page-footer__logo-image {
+  fill: #d22856;
+}
+
+.page-footer__logo:active .page-footer__logo-image {
+  opacity: 0.3;
+  fill: #283645;
+}
+
+.page-footer__logo-mobile {
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
+}
+
+.page-footer__logo-desktop {
+  display: none;
+
+  @media (min-width: @desktop-width) {
+    display: inline-block;
+  }
+}
+
+.page-footer__list {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 280px;
+  margin: 0;
+  margin-bottom: 27px;
+  padding: 0 11px;
+  padding-top: 4px;
+  box-sizing: border-box;
+  list-style: none;
+
+  @media (min-width: @tablet-width) {
+    max-width: 285px;
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: 500px;
   }
 }
 
 .page-footer__item {
-  margin-top: 41px;
+  margin-right: 12px;
 
-  &:nth-child(2) {
-    margin-top: 35px;
+  &:nth-child(4n) {
+    @media (min-width: @tablet-width) {
+      margin-right: 0;
+    }
+
+    @media (min-width: @tablet-width) {
+      margin-right: 12px;
+    }
   }
 
-  &:nth-child(3) {
-    margin-top: 39px;
+  &:nth-child(4n + 1) {
+    @media (min-width: @tablet-width) {
+      margin-left: 7px;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin-left: 0;
+    }
   }
+
+  &:nth-child(7n) {
+    @media (min-width: @desktop-width) {
+      margin-right: 0;
+    }
+  }
+
+  &:nth-child(7n + 1) {
+    @media (min-width: @desktop-width) {
+      margin-left: 11px;
+    }
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.page-footer__social {
+  position: relative;
+  display: flex;
+  width: 45px;
+  height: 45px;
+  border: 3px solid rgba(40, 54, 69, 0.1);
+  border-radius: 50%;
+
+  &:hover,
+  &:focus {
+    border-color: rgba(40, 54, 69, 1);
+  }
+
+  &:active {
+    border-color: rgba(40, 54, 69, 1);
+    opacity: 0.1;
+  }
+}
+
+.page-footer__social-logo {
+  position: absolute;
+
+  &--twitter {
+    top: 16px;
+    left: 14px;
+  }
+
+  &--facebook {
+    top: 11px;
+    left: 18px;
+  }
+
+  &--youtube {
+    top: 14px;
+    left: 17px;
+  }
+}
+
+.page-footer__copyright {
+  width: 150px;
+  margin-right: 20px;
+  text-align: right;
+  word-break: break-word;
 
   @media (min-width: @tablet-width) {
-    margin-top: -8px;
-    margin-left: 20px;
-
-    &:nth-child(2) {
-      margin-top: 2px;
-      margin-left: 69px;
-    }
-
-    &:nth-child(3) {
-      margin-top: 13px;
-      margin-left: 86px;
-    }
+    width: 156px;
+    margin-right: 0;
   }
-
-  @media (min-width: @desktop-width) {
-    margin-top: -15px;
-    margin-left: 131px;
-
-    &:nth-child(2) {
-      margin-top: -1px;
-      margin-left: 227px;
-    }
-
-    &:nth-child(3) {
-      margin-top: 7px;
-      margin-left: 223px;
-    }
-  }
-}
-
-.page-footer__logo-link {
-  color: @dark;
-
-  &:hover {
-    color: @lipstick;
-  }
-
-  &:active {
-    color: @dark;
-  }
-
-  &:active {
-    opacity: 0.3;
-  }
-}
-
-.page-footer__pink-logo {
-  @media (min-width: @desktop-width) {
-    display: none;
-  }
-}
-
-.page-footer__pink-logo--desktop {
-  display: none;
 }

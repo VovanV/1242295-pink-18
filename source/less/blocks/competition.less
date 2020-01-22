@@ -1,0 +1,51 @@
+.competition {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: column;
+    width: 620px;
+    margin: 0 auto;
+    margin-bottom: 44px;
+    padding: 0 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 940px;
+    margin-bottom: 0;
+    padding: 0 10px;
+  }
+}
+
+.competition__text {
+  .mobile-wrapper();
+  flex-direction: column;
+  margin-bottom: 34px;
+  line-height: 30px;
+  text-align: center;
+  word-wrap: break-word;
+
+  @media (min-width: @tablet-width) {
+    width: 100%;
+    max-width: 620px;
+    margin: 0;
+    margin-bottom: 71px;
+    padding: 0 30px;
+    font-size: 18px;
+    box-sizing: border-box;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: block;
+    max-width: none;
+    padding: 0 70px;
+  }
+}
+
+.competition__subtext {
+  font-size: 0;
+  line-height: 0;
+
+  @media (min-width: @tablet-width) {
+    font-size: inherit;
+    line-height: inherit;
+  }
+}
