@@ -160,15 +160,7 @@
   width: 100%;
   height: auto;
   fill: #ffffff;
-  pointer-events: none;
-
-  @media (min-width: @tablet-width) {
-    display: none;
-  }
-
-  @media (min-width: @desktop-width) {
-    display: none;
-  }
+  pointer-events: none;     //для EI11 состояния active у ссылки
 }
 
 .page-header__logo:hover .page-header__logo-image,
@@ -216,25 +208,5 @@
 
   @media (min-width: @desktop-width) {
     display: none;
-  }
-}
-
-.page-header__logo-glasses {
-  display: none;
-
-  @media (min-width: @tablet-width) {
-    display: inline;
-  }
-
-  @media (min-width: @desktop-width) {
-    display: none;
-  }
-
-  &--desktop {
-    display: none;
-
-    @media (min-width: @desktop-width) {
-      display: inline;
-    }
   }
 }
